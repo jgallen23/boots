@@ -14,7 +14,7 @@
     "jsdom": "*",
     "mkdirp": "*",
     "request": "*",
-    "zipfile": "*"
+    "zip": "*"
   },
   "devDependencies": {
   },

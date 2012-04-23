@@ -15,7 +15,7 @@ program
   .usage('[options]')
   .option('-j, --js [plugins]', 'JS Plugins to include', list)
   .option('-c, --css [components]', 'CSS Components to include', list)
-  .option('-o, --output [path]', 'Path to write files to', 'public')
+  .option('-o, --output [path]', 'Path to write files to [defaults to public]', 'public')
   .option('-l, --list', 'List available plugins and components')
   .parse(process.argv);
 
