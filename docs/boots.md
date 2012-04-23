@@ -4,7 +4,7 @@ Boots is a command line utility for Bootstrap.  It lets you customize your build
 
 ##Installation
 
-	npm install -g boots
+	npm install boots
 
 ##Usage
 
@@ -87,6 +87,7 @@ You can also run `boots --list` to get this list
 
 
 ##Future
+- build entire bootstrap
 - add var support
 - custom output filename
 - read from a config file
