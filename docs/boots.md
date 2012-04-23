@@ -1,6 +1,6 @@
 # Boots
 
-Boots is a command line utility for Bootstrap.  It lets you customize your builds without leaving the terminal.
+Boots is a command line utility for Bootstrap.  It will let you build a custom instance of boostrap without leaving your terminal. 
 
 ##Installation
 
