@@ -1,0 +1,12 @@
+
+  Usage: boots [options]
+
+  Options:
+
+    -h, --help              output usage information
+    -V, --version           output the version number
+    -j, --js [plugins]      JS Plugins to include
+    -c, --css [components]  CSS Components to include
+    -o, --output [path]     Path to write files to
+    -l, --list              List available plugins and components
+

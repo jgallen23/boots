@@ -1,0 +1,19 @@
+{
+  "author": "Greg Allen <@jgaui>",
+  "name": "boots",
+  "description": "twitter bootstrap cli",
+  "version": "0.0.1",
+  "dependencies": {
+    "aug": "*",
+    "commander": "*",
+    "mkdirp": "*",
+    "request": "*",
+    "zipfile": "*"
+  },
+  "devDependencies": {
+    "jsdom": "*"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+var program = require('commander');
+var fs = require('fs');
+var path = require('path');
+var run = require('../lib/run');
+var scrape = require('../lib/scrape');
+
+
+var list = function(val) {
+  return val.split(',');
+}
+
+program
+  .version(JSON.parse(fs.readFileSync(__dirname + '/../package.json', 'utf8')).version)
+  .usage('[options]')
+  .option('-j, --js [plugins]', 'JS Plugins to include', list)
+  .option('-c, --css [components]', 'CSS Components to include', list)
+  .option('-o, --output [path]', 'Path to write files to', 'public')
+  .option('-l, --list', 'List available plugins and components')
+  .parse(process.argv);
+
+if (program.list) {
+  scrape(function(opt) {
+    console.log('');
+    console.log('Javascript Plugins:');
+    opt.js.forEach(function(js) {
+      console.log(js);
+    });
+    console.log('');
+
+    console.log('CSS Components:');
+    opt.css.forEach(function(css) {
+      console.log(css);
+    });
+  });
+
+
+} else if (program.js || program.css) {
+  var opts = {
+    js: program.js || [],
+    css: program.css || []
+  }
+
+  var output = program.output;
+  run(opts, output, function() {
+    console.log('All done');
+  });
+} else {
+  process.stdout.write(program.helpInformation());
+  program.emit('--help');
+  process.exit(1);
+}
