@@ -11,12 +11,12 @@
   "dependencies": {
     "aug": "*",
     "commander": "*",
+    "jsdom": "*",
     "mkdirp": "*",
     "request": "*",
     "zipfile": "*"
   },
   "devDependencies": {
-    "jsdom": "*"
   },
   "engines": {
     "node": "*"
