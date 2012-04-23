@@ -1,1 +1,107 @@
-My Page
+<!DOCTYPE html><html><head><title></title><link href="http://fonts.googleapis.com/css?family=Voces" rel="stylesheet" type="text/css"><link rel="stylesheet" href="dist/common-8535402c.css"/><script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-24017782-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script></head><body><div id="toc"></div><a href="http://github.com/jgallen23/boots"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a><div id="wrapper"><h1>Boots</h1>
+<p>Boots is a command line utility for Bootstrap.  It lets you customize your builds without leaving the terminal.
+
+</p>
+<h2>Installation</h2>
+<pre><code><span class="title">npm</span> install -g boots</code></pre>
+<h2>Usage</h2>
+<pre><code><span class="label">Usage</span>: boots [options]
+
+<span class="label">Options</span>:
+
+    -h, <span class="comment">--help              output usage information</span>
+    -<span class="label">V</span>, <span class="comment">--version           output the version number</span>
+    -j, <span class="comment">--js [plugins]      JS Plugins to include</span>
+    -c, <span class="comment">--css [components]  CSS Components to include</span>
+    -o, <span class="comment">--output [path]     Path to write files to</span>
+    -l, <span class="comment">--list              List available plugins and components</span></code></pre>
+<h2>Examples</h2>
+<p>Lets say I just use bootstrap modal and tooltips, I can run this:
+
+</p>
+<pre><code>boots --js bootstrap-modal<span class="preprocessor">.js</span>,bootstrap-tooltip<span class="preprocessor">.js</span> --css modals<span class="preprocessor">.less</span>,tooltip<span class="preprocessor">.less</span> -o public/bootstrap</code></pre>
+<p>and I&#39;ll get a bootstrap.js and bootstrap.css that has just what I need.
+
+</p>
+<h2>Options</h2>
+<p>You can also run <code>boots --list</code> to get this list
+
+</p>
+<pre><code><span class="label">Javascript</span> <span class="label">Plugins</span>:
+<span class="title">bootstrap</span>-transition.js
+<span class="title">bootstrap</span>-modal.js
+<span class="title">bootstrap</span>-dropdown.js
+<span class="title">bootstrap</span>-scrollspy.js
+<span class="title">bootstrap</span>-tab.js
+<span class="title">bootstrap</span>-tooltip.js
+<span class="title">bootstrap</span>-popover.js
+<span class="title">bootstrap</span>-alert.js
+<span class="title">bootstrap</span>-button.js
+<span class="title">bootstrap</span>-collapse.js
+<span class="title">bootstrap</span>-carousel.js
+<span class="title">bootstrap</span>-<span class="class">typeahead.js</span>
+
+<span class="label">CSS</span> <span class="label">Components</span>:
+<span class="title">reset</span>.less
+<span class="title">scaffolding</span>.less
+<span class="title">grid</span>.less
+<span class="title">layouts</span>.less
+<span class="class"><span class="keyword">type</span>.less</span>
+<span class="title">code</span>.less
+<span class="title">labels</span>.less
+<span class="title">badges</span>.less
+<span class="title">tables</span>.less
+<span class="title">forms</span>.less
+<span class="title">buttons</span>.less
+<span class="title">sprites</span>.less
+<span class="title">button</span>-groups.less
+<span class="title">navs</span>.less
+<span class="title">navbar</span>.less
+<span class="title">breadcrumbs</span>.less
+<span class="title">pagination</span>.less
+<span class="title">pager</span>.less
+<span class="title">thumbnails</span>.less
+<span class="title">alerts</span>.less
+<span class="title">progress</span>-bars.less
+<span class="title">hero</span>-unit.less
+<span class="title">tooltip</span>.less
+<span class="title">popovers</span>.less
+<span class="title">modals</span>.less
+<span class="title">dropdowns</span>.less
+<span class="title">accordion</span>.less
+<span class="title">carousel</span>.less
+<span class="title">wells</span>.less
+<span class="title">close</span>.less
+<span class="title">utilities</span>.less
+<span class="title">component</span>-animations.less
+<span class="title">responsive</span>.less</code></pre>
+<h2>History</h2>
+<h4>0.0.1 (04/23/2012)</h4>
+<ul>
+<li>Initial release</li>
+</ul>
+<h2>Future</h2>
+<ul>
+<li>add var support</li>
+<li>custom output filename</li>
+<li>read from a config file</li>
+</ul>
+<h2>Contributors</h2>
+<ul>
+<li>Greg Allen (<a href="http://twitter.com/jgaui">@jgaui</a>) <a href="http://jga.me">jga.me</a></li>
+</ul>
+</div><script src="dist/common-bb2ec22a.js"></script><script>var ghInfo = $('<div/>').hubInfo({ 
+  user: 'jgallen23',
+  repo: 'boots'
+});
+$('h2:eq(0)').before(ghInfo);
+</script><script>$('#toc').toc();
+</script></body></html>
