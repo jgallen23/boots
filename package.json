@@ -1,8 +1,13 @@
 {
-  "author": "Greg Allen <@jgaui>",
+  "homepage": "https://projects.jga.me/boots",
+  "author": "Greg Allen <@jgaui> (http://jga.me)",
   "name": "boots",
   "description": "twitter bootstrap cli",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgallen23/boots.git"
+  },
   "dependencies": {
     "aug": "*",
     "commander": "*",
@@ -15,5 +20,9 @@
   },
   "engines": {
     "node": "*"
+  },
+  "main": "./lib/run",
+  "bin": {
+    "boots": "./bin/boots"
   }
 }
