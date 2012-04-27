@@ -1,5 +1,5 @@
 
-build:
+build: clean
 	@git fetch origin
 	@git checkout origin/master docs/boots.md
 	#./node_modules/.bin/markx-project boots.md
@@ -11,5 +11,7 @@ install:
 preview: build
 	@python -m SimpleHTTPServer 8001
 
+clean:
+	@rm -rf dist/*
 
-.PHONY: build install
+.PHONY: build install clean

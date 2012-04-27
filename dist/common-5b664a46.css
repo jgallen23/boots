@@ -57,6 +57,11 @@ code {
   word-wrap: break-word;
 }
 
+.repo-stats iframe {
+  float: right;
+  margin-left: 5px;
+}
+
 #toc {
   top: 0px;
   left: 0px;
