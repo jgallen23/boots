@@ -4,6 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var run = require('../lib/run');
 var scrape = require('../lib/scrape');
+var data = require('../data/data');
 
 
 var list = function(val) {
@@ -17,28 +18,31 @@ program
   .option('-c, --css [components]', 'CSS Components to include', list)
   .option('-o, --output [path]', 'Path to write files to [defaults to public]', 'public')
   .option('-l, --list', 'List available plugins and components')
+  .option('-a, --all', 'Download the entire bootstrap library')
   .parse(process.argv);
 
 if (program.list) {
-  scrape(function(opt) {
-    console.log('');
-    console.log('Javascript Plugins:');
-    opt.js.forEach(function(js) {
-      console.log(js);
-    });
-    console.log('');
+  console.log('');
+  console.log('Javascript Plugins:');
+  data.js.forEach(function(js) {
+    console.log(js);
+  });
+  console.log('');
 
-    console.log('CSS Components:');
-    opt.css.forEach(function(css) {
-      console.log(css);
-    });
+  console.log('CSS Components:');
+  data.css.forEach(function(css) {
+    console.log(css);
   });
 
-
-} else if (program.js || program.css) {
-  var opts = {
-    js: program.js || [],
-    css: program.css || []
+} else if (program.all || program.js || program.css) {
+  var opts;
+  if (program.all) {
+    opts = data;
+  } else {
+    opts = {
+      js: program.js || [],
+      css: program.css || []
+    }
   }
 
   var output = program.output;
