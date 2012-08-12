@@ -9,17 +9,15 @@
     "url": "https://github.com/jgallen23/boots.git"
   },
   "dependencies": {
-    "aug": "*",
-    "commander": "*",
-    "jsdom": "*",
-    "mkdirp": "*",
-    "request": "*",
-    "zip": "*"
+    "aug": "0.0.5",
+    "cli-table": "0.0.2",
+    "commander": "1.0.1",
+    "mkdirp": "0.3.3",
+    "request": "2.10.0",
+    "zip": "0.0.6"
   },
   "devDependencies": {
-  },
-  "engines": {
-    "node": "*"
+    "jsdom": "0.2.15"
   },
   "main": "./lib/run",
   "bin": {
