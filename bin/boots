@@ -22,17 +22,17 @@ program
   .parse(process.argv);
 
 if (program.list) {
-  console.log('');
-  console.log('Javascript Plugins:');
-  data.js.forEach(function(js) {
-    console.log(js);
+  var Table = require('cli-table');
+  var table = new Table({
+    head: ['Javascript Components', 'CSS Components']
   });
-  console.log('');
-
-  console.log('CSS Components:');
-  data.css.forEach(function(css) {
-    console.log(css);
-  });
+  var length = (data.css.length > data.js.length) ? data.css.length : data.js.length;
+  for (var i = 0; i < length; i++) {
+    var js = data.js[i] || '';
+    var css = data.css[i] || '';
+    table.push([js, css]);
+  }
+  console.log(table.toString());
 
 } else if (program.all || program.js || program.css) {
   var opts;
